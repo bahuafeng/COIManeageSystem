@@ -17,7 +17,7 @@ public class MainServer {
 	public static void main(String[] args)
 	{
 		init();
-		new Thread(new ListenTaskServer(port)).start();
+		new Thread(new ListenServerTask(port)).start();
 	}
 	
 	private static void init()

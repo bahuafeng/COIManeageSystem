@@ -17,7 +17,17 @@ public class Const {
 	public static final String PORT = "port";
 	
 	//服务端默认监听端口
-	public static final String DEFAULT_PORT = "7952";
+	public static final String DEFAULT_PORT = "7954";
+	
+	//输出数组
+	public static void opArray(Object[] arr)
+	{
+		op("the array is "+arr.getClass());
+		for(int i=0;i<arr.length;i++)
+		{
+			op(""+arr[i]);
+		}
+	}
 	
 	public static void op(String info)
 	{

@@ -18,27 +18,19 @@ public class CreatePersonServer {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public CreatePersonServer(Socket socket)
+	public CreatePersonServer(Socket returnSockets ,String[] dates)
 	{
 		Const.op("cp ger");
-		this.socket = socket;
+		this.dates = dates;
+		this.return_socket = returnSockets;
 	}
 	
 	public void startWork()
 	{
-		Const.op("start work in cp");
-		BufferedReader reader = null;
-		String temp = null;
-		try {
-			reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			while((temp = reader.readLine())!=null)
-			{
-				Const.op(temp);
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			Const.op("ÍøÂç´íÎó");
+		Const.op("start data aly");
+		for(int i=0;i<dates.length;i++)
+		{
+			Const.op(dates[i]);
 		}
 	}
 
@@ -57,5 +49,6 @@ public class CreatePersonServer {
 	private String mar_stu = null,edu_stu = null,photo_addr=null;
 	private int age = 0;
 	private String sql = null;
-	private Socket socket = null;
+	private Socket return_socket = null;
+	private String[] dates = null;
 }
