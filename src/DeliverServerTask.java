@@ -45,6 +45,7 @@ public class DeliverServerTask implements Runnable{
 			e.printStackTrace();
 			System.out.println("ÍøÂç´íÎó");
 		}
+		
 	}
 	
 	private void deliver(int cmd)
